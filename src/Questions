@@ -115,3 +115,32 @@ go to the developer origin trials https://developer.chrome.com/origintrials/#/tr
 I think the keys are simply used underneath the hood by the gemini Nano AI to make authorized calls
 
 In your html file, add a meta tag with the content attribute set to the api key. Add this meta tag for the three API keys, don't forget to add the attribute, http-equiv = "", i seem to have forgotten the string for the http. I am sure yall can figure it out 
+
+origin trials -
+https://developer.chrome.com/origintrials/#/trials/active
+
+Prompt Api Token -
+AvqWkgk/K4XDeKqXWYVGa2eQMS/kdXo0MORpEoS7hx7GGZ00LbhojkwiRB1ZuapCxS9T7iWJzXo/XR8R3WFmqgUAAACdeyJvcmlnaW4iOiJodHRwczovL2FpLWNoYXQtNjljaWdhejU3LWtvbGFwby1mYWl0aC10YWl3b3MtcHJvamVjdHMudmVyY2VsLmFwcDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElGb3JFeHRlbnNpb24iLCJleHBpcnkiOjE3NjA0ODYzOTksImlzU3ViZG9tYWluIjp0cnVlfQ==
+
+website link
+ https://developer.chrome.com/origintrials/#/registration/-2514679849746956287
+
+
+Translator Api Token -
+AmR8Svdsyxgrrk1JWh7goNc3Ctz4uHcNrMm9I2NVwV43QxQceF1/EcnUza1yESLh9jWModoc6yl049yob/MO7QIAAACUeyJvcmlnaW4iOiJodHRwczovL2FpLWNoYXQtNjljaWdhejU3LWtvbGFwby1mYWl0aC10YWl3b3MtcHJvamVjdHMudmVyY2VsLmFwcDo0NDMiLCJmZWF0dXJlIjoiVHJhbnNsYXRpb25BUEkiLCJleHBpcnkiOjE3NTMxNDI0MDAsImlzU3ViZG9tYWluIjp0cnVlfQ==
+
+translation link
+https://developer.chrome.com/origintrials/#/registration/-2059816287382536191
+
+Summarization Token -
+Ajz70ds6YMfy5YjpzPgUZgge8jwIFIyfjA1QFV0JY6xDG/FYY5eNkJLKmr8rJz/pKWei2NhWsbFZJBYH7k0IMwIAAACYeyJvcmlnaW4iOiJodHRwczovL2FpLWNoYXQtNjljaWdhejU3LWtvbGFwby1mYWl0aC10YWl3b3MtcHJvamVjdHMudmVyY2VsLmFwcDo0NDMiLCJmZWF0dXJlIjoiQUlTdW1tYXJpemF0aW9uQVBJIiwiZXhwaXJ5IjoxNzUzMTQyNDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZX0=
+
+website link
+https://developer.chrome.com/origintrials/#/registration/714401083077689345
+
+
+Language Detector token
+Aub0JB9ESfrqDi2zTXp4ka+eESwCpf5krCRjyzW5IT2C0CtA0htNX2wZdi0pJx/0fdBHrFzBijcuA1GHmJS8Zw0AAACaeyJvcmlnaW4iOiJodHRwczovL2FpLWNoYXQtNjljaWdhejU3LWtvbGFwby1mYWl0aC10YWl3b3MtcHJvamVjdHMudmVyY2VsLmFwcDo0NDMiLCJmZWF0dXJlIjoiTGFuZ3VhZ2VEZXRlY3Rpb25BUEkiLCJleHBpcnkiOjE3NDk1OTk5OTksImlzU3ViZG9tYWluIjp0cnVlfQ==
+
+website link - https://developer.chrome.com/origintrials/#/registration/-4203529710010892287
+

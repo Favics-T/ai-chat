@@ -64,71 +64,93 @@ const Chat = () => {
 
     return (
         <div className='bg-[#000b53] h-screen w-full flex flex-col md:flex-row items-center justify-center'>
-            <div className='flex gap-10 text-blue-500'>
+           <div className='bg-blue-600 px-4 py-4 rounded-lg w-96 md:w-[700px] flex justify-center items-center gap-4 '>
+           <div className='flex gap-10 text-blue-500 h-96 justify-center items-center gap-4'>
 
-                {/* Input Field */}
-                <div className='relative'>
-                    <input 
-                        type="text"
-                        className='bg-white md:w-96 w-40 rounded-xl text-blue-800 p-2'
-                        value={userInput}
-                        onChange={(e) => setUserInput(e.target.value)}
-                        placeholder="Enter text here..."
-                    />
-                    <MdArrowDropDownCircle 
-                        className='absolute right-4 top-2 cursor-pointer text-xl' 
-                        onClick={() => setDropDown(!dropDown)}
-                    />
-                </div>
+{/* body */}
+<div>
 
-                {/* Detect Language Section */}
-                <div className='text-center cursor-pointer' onClick={detectLanguage}>
-                    <BsTranslate className="text-white text-2xl mx-auto"/>
-                    <h1 className='text-white'>Detect Language</h1>
-                </div>
+    {/* Input Field */}
+<div className='relative'>
+    <input 
+        type="text"
+        className='bg-white md:w-96 w-[300px]  rounded-xl text-blue-800 p-2'
+        value={userInput}
+        onChange={(e) => setUserInput(e.target.value)}
+        placeholder="Enter text here..."
+    />
+    <MdArrowDropDownCircle 
+        className='absolute right-4 top-2 cursor-pointer text-xl' 
+        onClick={() => setDropDown(!dropDown)}
+    />
+</div>
 
-                {/* Summarize Section */}
-                <div className='text-center cursor-pointer' onClick={handleSummarize}>
-                    <MdSummarize className="text-white text-2xl mx-auto"/>
-                    <h1 className='text-white'>Summarize</h1>
-                </div>
-            </div>
+{/* Display Summary */}
+<div className="mt-6 bg-white p-4 rounded-lg overflow-y-scroll h-60">
+<h2 className="text-blue-800 font-bold">Summary:</h2>
+{loading ? (
+    <p className="text-gray-500">Summarizing...</p>
+) : (
+    <p className="text-gray-800">{summary || "No summary generated yet."}</p>
+)}
+</div>
 
-            {/* Languages List (Dropdown) */}
-            {dropDown && (
-                <div className='bg-white p-2 rounded-lg mt-2 shadow-lg'>
-                    {languages.map((language, index) => (
-                        <p 
-                            key={index} 
-                            className="text-blue-800 hover:bg-gray-200 p-2 cursor-pointer"
-                            onClick={() => {
-                                setUserInput(language);
-                                setDropDown(false);
-                            }}
-                        >
-                            {language}
-                        </p>
-                    ))}
-                </div>
-            )}
 
-            {/* Display Summary */}
-            <div className="mt-6 bg-white p-4 rounded-lg w-3/4">
-                <h2 className="text-blue-800 font-bold">Summary:</h2>
-                {loading ? (
-                    <p className="text-gray-500">Summarizing...</p>
-                ) : (
-                    <p className="text-gray-800">{summary || "No summary generated yet."}</p>
-                )}
-            </div>
+{/* language detect and summarize starts here */}
+<div className='flex gap-8 mt-4 ml-9'>
 
-            {/* Display Detected Language */}
-            {detectedLanguage && (
-                <div className="mt-4 bg-white p-4 rounded-lg w-3/4">
-                    <h2 className="text-blue-800 font-bold">Detected Language:</h2>
-                    <p className="text-gray-800">{detectedLanguage}</p>
-                </div>
-            )}
+{/* Detect Language Section */}
+<div className='text-center cursor-pointer' onClick={detectLanguage}>
+    <BsTranslate className="text-white text-2xl mx-auto"/>
+    <h1 className='text-white'>Detect Language</h1>
+</div>
+
+{/* Summarize Section */}
+<div className='text-center cursor-pointer' onClick={handleSummarize}>
+    <MdSummarize className="text-white text-2xl mx-auto"/>
+    <h1 className='text-white'>Summarize</h1>
+</div>
+
+</div>
+
+{/* language detect and summarize ends here */}
+
+
+    
+</div>
+
+</div>
+
+{/* Languages List (Dropdown) */}
+{dropDown && (
+<div className='bg-white p-2 rounded-lg mt-2 shadow-lg'>
+    {languages.map((language, index) => (
+        <p 
+            key={index} 
+            className="text-blue-800 hover:bg-gray-200 p-2 cursor-pointer"
+            onClick={() => {
+                setUserInput(language);
+                setDropDown(false);
+            }}
+        >
+            {language}
+        </p>
+    ))}
+</div>
+)}
+
+
+
+{/* Display Detected Language */}
+{detectedLanguage && (
+<div className="mt-4 bg-white p-4 rounded-lg w-3/4">
+    <h2 className="text-blue-800 font-bold">Detected Language:</h2>
+    <p className="text-gray-800">{detectedLanguage}</p>
+</div>
+)}
+
+</div>
+            
         </div>
     );
 };
